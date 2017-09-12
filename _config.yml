@@ -21,3 +21,15 @@ version:             1.0.0
 
 # Ruby gems
 plugins: [jekyll-paginate]
+# Authors
+authors:
+  pjhjohn:
+    name: 박준호
+    gravatar: 9ebc92b0e36b0c5d3f134aeee5c92096
+    email: pjhjohn@soundl.ly
+    github: pjhjohn
+  humbledude:
+    name: 박근희
+    gravatar: ba40387f2f18e1e0c2164d111cbe0607
+    email: keunhui.park@soundl.ly
+    github: humbledude
