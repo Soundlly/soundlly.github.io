@@ -11,3 +11,15 @@
 .text-accent {
   color: #E43D32;
 }
+.author img {
+  margin: -0.1rem 0.5rem 0rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display:inline-block;
+  vertical-align:middle;
+  border-radius: 50%;
+}
+.author span {
+  vertical-align:middle;
+  font-family: "Nanum Myeongjo", Georgia, "Times New Roman", serif;
+}

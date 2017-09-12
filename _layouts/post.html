@@ -5,7 +5,10 @@ layout: default
 
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-meta text-serif">{{ page.date | date: "%Y년 %m월 %d일" }} | {{ author.name }}</span>
+  <div class="author">
+    <span>{{ page.date | date: "%Y년 %m월 %d일" }} | {{ author.name }}</span>
+    <img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=40">
+  </div>
 </div>
 
 <div class="post">

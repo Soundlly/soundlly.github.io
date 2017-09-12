@@ -1,26 +1,27 @@
 # Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
+permalink: pretty
 
 # Setup
-title:               Soundlly
-tagline:             'Bring Your Video Viewers to Mobile with Inspration'
-description:         ''
-url:                 https://soundlly.github.io
-paginate:            5
+title: Soundlly
+tagline: 'inspires your video viewers to mobile'
+description: ''
+url: https://soundlly.github.io
+paginate: 5
 
-# About/contact
-author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
-
-# Custom vars
-version:             1.0.0
-
-# Ruby gems
+# Plugins
 plugins: [jekyll-paginate]
+
+# GitHub
+github:
+  soundlly:
+    url: https://github.com/Soundlly
+  android:
+    url: https://github.com/Soundlly/BitsoundSDK-Android
+    version: v3.3.1
+  ios:
+    url: https://github.com/Soundlly/BitsoundSDK-iOS
+    version: 2.1.1
+
 # Authors
 authors:
   pjhjohn:
