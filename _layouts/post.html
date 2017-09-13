@@ -6,7 +6,7 @@ layout: default
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <div class="author">
-    <span>{{ page.date | date: "%Y년 %m월 %d일" }} | {{ author.name }}</span>
+    <span>{{ page.date | date: "%Y년 %m월 %d일" }} | {{ author.nickname }}</span>
     <img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=40">
   </div>
 </div>
@@ -21,7 +21,7 @@ layout: default
   </div>
   <div class="description">
     <h2>
-      {{ author.name }}
+      {{ author.nickname }}({{ author.fullname }})
       {% if author.facebook %}
         <a target="_blank" href="{{ author.facebook }}">
           <i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -30,6 +30,11 @@ layout: default
       {% if author.github %}
         <a target="_blank" href="http://github.com/{{ author.github }}">
           <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+      {% if author.email %}
+        <a href="mailto:{{ author.email }}">
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
         </a>
       {% endif %}
     </h2>

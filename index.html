@@ -11,7 +11,7 @@ title: Home
     </h1>
     {% assign author = site.authors[post.author] %}
     <div class="author">
-      <span>{{ post.date | date: "%Y년 %m월 %d일" }} | {{ author.name }}</span>
+      <span>{{ post.date | date: "%Y년 %m월 %d일" }} | {{ author.nickname }}</span>
       <img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=40">
     </div>
   </div>

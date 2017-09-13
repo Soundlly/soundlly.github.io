@@ -56,27 +56,36 @@
   padding: 1.5rem 0.5rem;
 }
 .author-profile .description > h2 {
-  margin: 0 0 0.4rem;
+  margin: 0 0 0.6rem;
+  word-wrap:break-word;
 }
 .author-profile .description > h4 {
   margin: 0 0 1rem;
+  word-wrap:break-word;
 }
 .author-profile .description a i {
   float: right;
-  margin: 0 0 0 1rem;
+  margin: 0 0 0 0.8rem;
   font-size: 1.5rem;
 }
+.author-profile .description a:hover i {
+  cursor: pointer;
+}
+.author-profile .description a i.fa-envelope-o {
+  color: #333333;
+}
+.author-profile .description a:hover i.fa-envelope-o {
+  color: #767676;
+}
 .author-profile .description a i.fa-github {
-  color: #303030;
+  color: #333333;
 }
 .author-profile .description a:hover i.fa-github {
-  cursor: pointer;
-  color: #E43D32;
+  color: #767676;
 }
 .author-profile .description a i.fa-facebook-official {
   color: #3b5998;
 }
 .author-profile .description a:hover i.fa-facebook-official {
-  cursor: pointer;
-  color: #E43D32;
+  color: #8b9dc3;
 }
