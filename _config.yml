@@ -24,13 +24,103 @@ github:
 
 # Authors
 authors:
-  pjhjohn:
-    name: 박준호
-    gravatar: 9ebc92b0e36b0c5d3f134aeee5c92096
-    email: pjhjohn@soundl.ly
-    github: pjhjohn
+  tae:
+    nickname: tae
+    fullname: 김태현
+    description: ''
+    gravatar: f223bec92480c1e925845176378ba84e
+    email: tae@soundl.ly
+    facebook: https://www.facebook.com/profile.php?id=100000542862035
+  jae:
+    nickname: jae
+    fullname: 하재열
+    description: ''
+    gravatar: 3b81a5e75f776285aba4946abfbb3c73
+    email: jae@soundl.ly
+  fe:
+    nickname: Leo
+    fullname: 김현철
+    description: ''
+    gravatar: 180a9589f98d87d032bd9ddfcf07cff3
+    email: fe@soundl.ly
+    facebook: https://www.facebook.com/fe0603
+  bj:
+    nickname: bj
+    fullname: 장병준
+    description: ''
+    gravatar: 2e14532bf67050aa88df61d9e598c1f4
+    email: bj@soundl.ly
+    facebook: https://www.facebook.com/byungjun.jang.1
+  dayun1994:
+    nickname: dayun1994
+    fullname: 윤다은
+    description: ''
+    gravatar: f264d97c87dde2a1859b726f44ba87d3
+    email: dayun1994@soundl.ly
+  swka:
+    nickname: Shawn
+    fullname: 가순원
+    description: ''
+    gravatar: 4318c05d63ca1a422da68fceb0ba6c5a
+    email: swka@soundl.ly
+    github: swka
+  jwkang:
+    nickname: Jaewook Kang
+    fullname: 강재욱
+    description: ''
+    gravatar: 2158b22bd0680046e8fad2a42bc2cd45
+    email: jwkang@soundl.ly
+    github: jaewookkang
+    facebook: https://www.facebook.com/jwkkang
   humbledude:
-    name: 박근희
+    nickname: humbledude
+    fullname: 박근희
+    description: ''
     gravatar: ba40387f2f18e1e0c2164d111cbe0607
     email: keunhui.park@soundl.ly
     github: humbledude
+  wonje:
+    nickname: wonje
+    fullname: 송원제
+    description: ''
+    gravatar: 71cfe1607e66a3bc02499c090874d75c
+    email: wonje@soundl.ly
+    github: wonje-soundlly
+  pjhjohn:
+    nickname: pjhjohn
+    fullname: 박준호
+    description: ''
+    gravatar: 9ebc92b0e36b0c5d3f134aeee5c92096
+    email: pjhjohn@soundl.ly
+    github: pjhjohn
+    facebook: https://www.facebook.com/joonho.park.54
+  jisu9921:
+    nickname: 최지수
+    fullname: 최지수
+    description: ''
+    gravatar: 8a782f9b4bee234c384c0bf09146edc2
+    email: jisu9921@soundl.ly
+    github: jisu9921
+  blankymunn3:
+    nickname: GU
+    fullname: 김건우
+    description: ''
+    gravatar: 1166b7973b7f513f29b43c81c2af65c3
+    email: blankymunn3@soundl.ly
+    github: blankymunn3
+    facebook: https://www.facebook.com/profile.php?id=100006088275652
+  kjh0309ok:
+    nickname: kjh0309ok
+    fullname: 김종화
+    description: ''
+    gravatar: 9afa2ae2433a0d4bbddd1d114dbbf03c
+    email: kjh0309ok@soundl.ly
+    github: kjh0309ok
+    facebook: https://www.facebook.com/profile.php?id=100003392941909
+  haegol123:
+    nickname: haegol123
+    fullname: 이창호
+    description: ''
+    gravatar: c2988f07b264d31cce493f8577e9a0e9
+    email: haegol123@soundl.ly
+    github: haegol123
