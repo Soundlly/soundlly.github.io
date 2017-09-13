@@ -11,8 +11,30 @@ layout: default
   </div>
 </div>
 
-<div class="post">
+<div class="content">
   {{ content }}
+</div>
+
+<div class="author-profile">
+  <div class="thumbnail">
+    <img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=200">
+  </div>
+  <div class="description">
+    <h2>
+      {{ author.name }}
+      {% if author.facebook %}
+        <a target="_blank" href="{{ author.facebook }}">
+          <i class="fa fa-facebook-official" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+      {% if author.github %}
+        <a target="_blank" href="http://github.com/{{ author.github }}">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+    </h2>
+    <h4>{{ author.description }}</h4>
+  </div>
 </div>
 
 <div class="related">

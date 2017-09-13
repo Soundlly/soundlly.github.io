@@ -310,6 +310,7 @@ tbody tr:nth-child(odd) th {
   margin-top: 0;
   margin-bottom: 0;
   color: #E43D32;
+  font-family: "Nanum Gothic", Helvetica, Arial, sans-serif;
 }
 .masthead-title a {
   color: #E43D32;
@@ -366,7 +367,7 @@ tbody tr:nth-child(odd) th {
 
 /* Related posts */
 .related {
-  padding-top: 2rem;
+  padding-top: 1rem;
   padding-bottom: 2rem;
 }
 .related-posts {

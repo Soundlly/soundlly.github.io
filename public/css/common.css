@@ -11,8 +11,10 @@
 .text-accent {
   color: #E43D32;
 }
+
+/* Author */
 .author img {
-  margin: -0.1rem 0.5rem 0rem;
+  margin: -0.2rem 0.5rem 0rem;
   width: 1.5rem;
   height: 1.5rem;
   display:inline-block;
@@ -22,4 +24,59 @@
 .author span {
   vertical-align:middle;
   font-family: "Nanum Myeongjo", Georgia, "Times New Roman", serif;
+}
+
+/* Post */
+.content {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+/* Author Details */
+.author-profile {
+  margin:0;
+  padding: 0;
+  border-bottom: 1px solid #eee;
+}
+.author-profile div.thumbnail {
+  display: inline-block;
+  vertical-align:top;
+  width: 30%;
+}
+.author-profile div.thumbnail > img {
+  margin: 0;
+  padding: 1.5rem 0.5rem;
+  border-radius: 50%;
+}
+.author-profile div.description {
+  display: inline-block;
+  vertical-align:top;
+  width: 65%;
+  padding: 1.5rem 0.5rem;
+}
+.author-profile .description > h2 {
+  margin: 0 0 0.4rem;
+}
+.author-profile .description > h4 {
+  margin: 0 0 1rem;
+}
+.author-profile .description a i {
+  float: right;
+  margin: 0 0 0 1rem;
+  font-size: 1.5rem;
+}
+.author-profile .description a i.fa-github {
+  color: #303030;
+}
+.author-profile .description a:hover i.fa-github {
+  cursor: pointer;
+  color: #E43D32;
+}
+.author-profile .description a i.fa-facebook-official {
+  color: #3b5998;
+}
+.author-profile .description a:hover i.fa-facebook-official {
+  cursor: pointer;
+  color: #E43D32;
 }
