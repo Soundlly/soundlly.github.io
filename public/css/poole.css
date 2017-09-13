@@ -49,12 +49,12 @@ body {
 
 html {
   font-family: "Nanum Gothic", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
 }
 @media (min-width: 38em) {
   html {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
@@ -287,7 +287,7 @@ tbody tr:nth-child(odd) th {
  */
 
 .container {
-  max-width: 38rem;
+  max-width: 48rem;
   padding-left:  1rem;
   padding-right: 1rem;
   margin-left:  auto;
@@ -302,7 +302,7 @@ tbody tr:nth-child(odd) th {
  */
 
 .masthead {
-  padding-top:    1rem;
+  padding-top: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid #eee;
@@ -315,12 +315,13 @@ tbody tr:nth-child(odd) th {
 }
 .masthead-title a {
   color: #E43D32;
+  font-size: 120%;
   font-weight: bold;
 }
 .masthead-title small {
-  font-size: 75%;
-  font-weight: 400;
   color: #c0c0c0;
+  font-size: 90%;
+  font-weight: 400;
   letter-spacing: 0;
 }
 

@@ -4,8 +4,12 @@
 
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
-  <div class="sidebar-item">
-    <p>{{ site.description }}</p>
+  <div class="masthead">
+    <div class="container">
+      <h3 class="masthead-title">
+        <a href="/" title="Home">{{ site.title }}</a>
+      </h3>
+    </div>
   </div>
 
   <nav class="sidebar-nav">
@@ -30,7 +34,7 @@
     <a class="sidebar-nav-item" target="_blank" href="{{ site.github.soundlly.url }}"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;&nbsp;Soundlly GitHub</a>
   </nav>
 
-  <div class="sidebar-item">
+  <div class="sidebar-item" style="position:absolute;bottom:0;">
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
   </div>
 </div>
