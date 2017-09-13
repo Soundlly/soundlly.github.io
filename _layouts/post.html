@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% assign author = site.authors[page.author] %}
+{% assign author = site.authors[page.author] | default: site.authors.soundlly %}
 
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
