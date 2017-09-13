@@ -89,3 +89,38 @@
 .author-profile .description a:hover i.fa-facebook-official {
   color: #8b9dc3;
 }
+
+/* Youtube Player with Caption */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  margin: 4rem auto;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Image with Link and Caption */
+.include-image a {
+  color: #515151;
+}
+.include-image a:hover {
+  color: #ED7D76;
+}
+.include-image div {
+  text-align: center;
+  margin: -3rem auto 4rem;
+}
+.include-image img {
+  max-width: 90%;
+  margin: 4rem auto;
+}

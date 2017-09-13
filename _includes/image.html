@@ -1,0 +1,15 @@
+<div class="include-image">
+  {% if include.to %}
+    <a target="_blank" href="{{ include.to }}">
+      <img src="{{ include.src }}">
+      {% if include.caption %}
+        <div>{{ include.caption }}</div>
+      {% endif %}
+    </a>
+  {% else %}
+    <img src="{{ include.src }}">
+    {% if include.caption %}
+      <div>{{ include.caption }}</div>
+    {% endif %}
+  {% endif %}
+</div>
