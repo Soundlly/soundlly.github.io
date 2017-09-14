@@ -3,29 +3,41 @@
 📚 [GitHub Pages](https://pages.github.com/) powered [Soundlly](https://github.com/Soundlly) Blog, with [Jekyll](http://jekyllrb.com) and [Poole](http://getpoole.com) based [Lanyon](https://github.com/poole/lanyon)
 
 
-## Getting Started
+## Getting Started (on MacOS)
 
-#### 1. Clone this Repository
+#### 1. Install [Homebrew](https://brew.sh/)
+
+```bash
+workspace$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+#### 2. Install Ruby
+
+```bash
+workspace$ brew install ruby
+```
+
+#### 3. Install [Jekyll](https://jekyllrb.com/docs/installation/) and Plugins
+
+```bash
+workspace$ sudo gem install jekyll
+workspace$ sudo gem install jekyll-paginate
+```
+
+#### 4. Clone Repository
 
 ```bash
 workspace$ git clone https://github.com/Soundlly/soundlly.github.io blog
 ```
 
-#### 2. [Install Ruby](http://railsapps.github.io/installrubyonrails-mac.html)
-
-#### 3. [Install Jekyll](https://jekyllrb.com/docs/installation/)
-
-#### 4. Install jekyll-paginate Gem
+#### 5. Serve
 
 ```bash
 workspace$ cd blog
-workspace/blog$ sudo gem install jekyll-paginate
+workspace/blog$ jekyll serve
 ```
 
-#### 5. Run
-
 ```bash
-workspace/blog$ jekyll serve
 Configuration file: workspace/blog/_config.yml
             Source: workspace/blog
        Destination: workspace/blog/_site
@@ -39,7 +51,7 @@ Configuration file: workspace/blog/_config.yml
 
 #### 6. Open [http://127.0.0.1:4000](http://127.0.0.1:4000) to see what happens!
 
-## New Blog Article
+## New Blog Post with [typora.io](https://typora.io)
 
 1. Create `YYYY-MM-DD-Your-Blog-Title.md` under `_posts/`
 
@@ -47,7 +59,7 @@ Configuration file: workspace/blog/_config.yml
 
 3. Create new feature branch, commit, push and send PR
 
-4. After PR Review, article will be merged into `master` branch
+4. After PR Review, post will be merged into `master` branch
 
 5. [Jekyll](http://jekyllrb.com) will automatically compile blog into [https://soundlly.github.io/](https://soundlly.github.io/)
 
