@@ -11,7 +11,9 @@ recruiting: true
 locale: ko_KR
 
 # Plugins
-plugins: [jekyll-paginate]
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
 
 # GitHub
 github:
