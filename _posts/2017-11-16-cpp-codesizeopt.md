@@ -1,6 +1,6 @@
 ---
 layout: post
-title: C++ On Mobile - 코드 사이즈 최적화
+title: Lean C++ On Mobile - 코드 사이즈 최적화
 description: 모바일 SDK에 적용되는 C++ Native 코드 사이즈 최적화에 대해서 이야기 합니다.
 author: jwkang
 subdir: cpp-codesizeopt
@@ -90,7 +90,7 @@ product레벨의 C++코딩을 처음으로 하게된 신입 개발자들에게�
 
 ## 마치며
 - 제가 정리하고 보니 결국 모바일 / 임베디드 C++ 최적화는 결국 ~~노가다~~ 장인정신인거 같네요 ㅠㅠ.
-- 다음 C++ on Mobile 2탄 에서는 실행속도 최적화에 대해서 얘기합니다! 기대해주세요!
+- 다음 Lean C++ on Mobile 2탄 에서는 실행속도 최적화에 대해서 얘기합니다! 기대해주세요!
 
 기계들이 스스로 노래하고 흥얼거리는 세상을 위해!
 
