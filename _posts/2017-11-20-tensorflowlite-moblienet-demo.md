@@ -19,9 +19,9 @@ Demo는 구글이 공개한 컴퓨터 비전 모델인 [MobileNet](https://arxiv
 그리고 멀리서 찍으면 비전상에 다양한 사물이 들어와서 그런지 인식률이 떨어지는 것을 확인하였습니다.
 
 ## TensorFlow Lite 개요
-TensorFlow Lite는 기존의 TensorFlow을 통해서 학습된 모델을 기반으로 합니다.
-TensorFlow 모델을 "TensorFlow Lite Converter"통해서 TensorFlow Lite 모델로 (tflite)로 변환하여
-Andoird /iOS 플랫폼에 집어넣어 모바일에서 Inference를 용이하게 만든 프임워크 입니다. 
+TensorFlow Lite는 기존의 TensorFlow을 통해서 학습된 모델을 기반으로 합니다. 
+TensorFlow 모델을 "TensorFlow Lite Converter" 통해서 TensorFlow Lite 모델(tflite)로 변환하고
+Andoird /iOS 환경에서 Inference를 용이하게 만듭니다. 
 따라서 TensorFlow Lite의 목적은 모델의 훈련에 있는 것이 아니고 저복잡도+작은바이너리로 모델로 변환하여 모바일 환경에서 구동하는 것에 있습니다.
 {% include image.html subdir=page.subdir name='tensorflowlite.jpg' caption='그림1: 구글문서 중 Tensorflow Lite 아키텍쳐 그림' %}
 
