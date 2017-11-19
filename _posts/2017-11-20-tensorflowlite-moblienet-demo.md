@@ -6,9 +6,9 @@ author: jwkang
 subdir: tensorflowlite-mobilenet-demo
 comments: true
 ---
-아기다리 고기다리던 TensorFlow Lite preview 버전이 릴리즈되었습니다.
-([[Link]](https://www.tensorflow.org/mobile/tflite/))
-안타깝게도 [pre-build되어 공개된 apk](https://storage.googleapis.com/download.tensorflow.org/deps/tflite/TfLiteCameraDemo.apk) 는 인스톨 에러가 나는 관계로.... (구글 디스아님) 
+
+아기다리 고기다리던 TensorFlow Lite preview 버전이 릴리즈되었습니다.([[Link]](https://www.tensorflow.org/mobile/tflite/))
+안타깝게도 [pre-build되어 공개된 apk](https://storage.googleapis.com/download.tensorflow.org/deps/tflite/TfLiteCameraDemo.apk)는 인스톨 에러가 나는 관계로.... (~~구글 디스아님~~) 
 제가 Github에 올라와 있는 데모를 빌드해서 삼성의 명품 갤럭시 S7에서 동작시켜봤습니다.
 Demo는 구글이 공개한 컴퓨터 비전 모델인 MobileNet을 가지고 사물인식 (Object classification)을 하는 앱입니다.
 
