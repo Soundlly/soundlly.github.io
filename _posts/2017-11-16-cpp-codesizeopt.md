@@ -4,6 +4,7 @@ title: Lean C++ On Mobile - 코드 사이즈 최적화
 description: 모바일 SDK에 적용되는 C++ Native 코드 사이즈 최적화에 대해서 이야기 합니다.
 author: jwkang
 subdir: cpp-codesizeopt
+thumbnail: thumbnail_lean_cpp.jpg
 comment: true
 ---
 모바일앱 SDK에 적용되는 C++ Native 코드 사이즈 최적화에 대해서 이야기 합니다.
