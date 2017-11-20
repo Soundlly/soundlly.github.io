@@ -18,31 +18,27 @@ comments: true
 
 ## 동작 화면 
 일단 보여주고 시작합니다. 갤럭시 S7으로 동작시킨 결과입니다. 맥주병과 머그컵 그리고 마우스를 인식시켜 보았습니다. 
-테스트 상으로는 맥주병과 마우스를 잘인식하는 반면 머그컵은 잘 인식하지 못하는 군요.
+테스트 상으로는 맥주병과 마우스를 잘 인식하는 반면 머그컵은 잘 인식하지 못하는 군요.
 그리고 멀리서 찍으면 비전상에 다양한 사물이 들어와서 그런지 인식률이 떨어지는 것을 확인하였습니다.
 
 {% include image.html subdir=page.subdir name='demo.gif' caption='그림1: 갤럭시 S7 + TensorFlowLite + MobileNet으로 마우스 + 머그컵 + 맥주병 인식' %}
 
-## 테스트 환경
-- 테스트 디바이스: Samsung Galaxy S7 (SM-G930L) + Android 7.0 (Nuga)
-- OS : Mac OS X 10.11.6
-- 빌드 환경: 
-  - Android Studio 3.0
-  - Bazerl Version : 0.7
-  - Android Build Tool Level: 26.1.1
-  - Android NDK Version: 16.0
 
 ## TensorFlow Lite 개요
-TensorFlow Lite는 구글의 IoT 및 모바일디바이스에서 머신러닝을 
+구글은 IoT 및 모바일디바이스에 머신러닝엔진을 탑재하기 위해 그동안 많은 것을 준비해 왔습니다. 
+제가 여기저기서 주워들은 바를 바탕으로 구글의 머신러닝 비전을 해석해 봤습니다. (많은 의견 바랍니다.)
+  - 1) **Pre-training Model in Cloud**: 구글은 [Cloud ML](https://cloud.google.com/ml-engine/)과 [TensorFlow](https://www.tensorflow.org/)를 개발 하였습니다. 클라우드에 있는 public 데이터로 훈련하여 어느정도 성능이 보장되는 모델을 사용자들에게 제공합니다.
+  - 2) **Local fine-training with private data**: 구글은 [Colaboratory](https://research.google.com/colaboratory/unregistered.html)을 [TensorFlow](https://www.tensorflow.org/)와 함께 지원합니다. 사용자들이 손쉽게 개인 데이터를 Tensorflow를 통해서 훈련시킬수 있도록 합니다.
+  - 3) **Low complex inference in mobile!**
 
-TensorFlow Lite는 기존의 TensorFlow을 통해서 학습된 모델을 기반으로 합니다. 
-TensorFlow 모델을 "TensorFlow Lite Converter" 통해서 TensorFlow Lite 모델(tflite)로 변환하여
+"3)"을 위해서 구글이 제공하는것이 바로 [TensorFlow Lite](https://www.tensorflow.org/mobile/tflite/)입니다. 따라서 TensorFlow Lite의 목적은 모델의 훈련에 있는 것이 아니고 모바일 환경에서 저복잡도+작은바이너리로 모델를 구동하는 것에 있습니다.
+TensorFlow Lite는 기존의 TensorFlow trained 모델을 "TensorFlow Lite Converter" 통해서 TensorFlow Lite 모델(tflite)로 변환하여
 Andoird /iOS 환경에서 Inference를 용이하게 만듭니다. 
-따라서 TensorFlow Lite의 목적은 모델의 훈련에 있는 것이 아니고 모바일 환경에서 저복잡도+작은바이너리로 모델를 구동하는 것에 있습니다.
+
 
 {% include image.html subdir=page.subdir name='tensorflowlite.jpg' caption='그림2: Tensorflow Lite 아키텍쳐 (https://www.tensorflow.org/mobile/tflite/)' %}
 
-## 준비하기 
+## 빌드 환경 준비하기 
 - 먼저 Android Studio 3.0 가 필요합니다. 인스톨 해주세요. ([여기서 가능](https://developer.android.com/studio/index.html))
 - 이전에 TensorFlow repository를 클론 안하신 분들은 적당한 장소에 클론합니다. 참고로 데는 클론한 repo의 "tensorflow/contrib/lite/java/demo"에 위치해 있습니다.
 ```bash
@@ -60,6 +56,15 @@ Build target: bazel-out/darwin_x86_64-opt/bin/src/main/java/com/google/devtools/
 
 {% include image.html subdir=page.subdir name='android_sdk_setup.png' caption='그림3: Android SDK tool + NDK 업데이트' %}
 
+### 테스트 환경 정리
+- 테스트 디바이스: Samsung Galaxy S7 (SM-G930L) + Android 7.0 (Nuga)
+- OS : Mac OS X 10.11.6
+- 빌드 환경: 
+  - Android Studio 3.0
+  - Bazerl Version : 0.7
+  - Android Build Tool Level: 26.1.1
+  - Android NDK Version: 16.0
+
 ## APK 빌드하고 실행 후 1차 실패
 - 1) Android Studio를 실행해서 "tensorflow/contrib/lite/java/demo" 폴터를 선택해서 프로젝트를 open합니다.
 - 2) Android Studio상에서 부족한 라이브러리나 빌드툴을 IDE가 시키는데로 인스톨하고 gradle sync 진행시킵니다.
@@ -68,6 +73,8 @@ Build target: bazel-out/darwin_x86_64-opt/bin/src/main/java/com/google/devtools/
 - 빌드가 성공하고 구동이 잘되는줄 알았으나....
 
 {% include image.html subdir=page.subdir name='beer_bottle.jpg' caption='그림4: (a) 학습모델이 없어서 "Uninitialized Classifier or invalid context."라고 나온다. (b) 모델 넣고 다시 빌드 해서 성공!' %}
+
+
 
 ## MobileNet 모델을 다운로드해서 다시 빌드 후 성공
 - 성공한줄 알았으나, "Uninitialized Classifier or invalid context."라는 메세지와 함께 동작을 하지 않았습니다. (그림4-(a)) 여차여차 알아본 결과 모델이 없이 껍데기만 빌드 했던 것이 원인이었습니다.
