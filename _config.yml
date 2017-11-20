@@ -83,7 +83,7 @@ authors:
     description: >
      사운들리에서 모바일 환경을 위한 **신호처리**와 **머신러닝**을 연구합니다.<br>
      최근에는 [TensorFlowLite](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/lite) + Convolutional Neural Net에 빠져 있습니다.<br>
-     집에서는 볶음밥 레시피를 연구합니다. :-)
+     집에서는 볶음밥 레시피를 연구합니다 :-)
     gravatar: 2158b22bd0680046e8fad2a42bc2cd45
     email: jwkang@soundl.ly
     github: jwkanggist
