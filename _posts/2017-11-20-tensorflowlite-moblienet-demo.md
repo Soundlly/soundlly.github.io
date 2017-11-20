@@ -4,6 +4,7 @@ title: TensorFlowLite 맛보기 - MoblieNet demo 빌드 + 인스톨 + 실행
 description: TensorflowLite 프리뷰 버전에서 공개된 데모앱의 버그를 잡고 빌드해서 테스트 해봅니다.
 author: jwkang
 subdir: tensorflowlite-mobilenet-demo
+thumbnail: tensorflowlogo.png
 comments: true
 ---
 
