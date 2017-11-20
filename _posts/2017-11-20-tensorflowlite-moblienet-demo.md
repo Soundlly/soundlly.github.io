@@ -18,12 +18,15 @@ Demo는 구글이 공개한 컴퓨터 비전 모델인 [MobileNet](https://arxiv
 테스트 상으로는 맥주병과 마우스를 잘인식하는 반면 머그컵은 잘 인식하지 못하는 군요.
 그리고 멀리서 찍으면 비전상에 다양한 사물이 들어와서 그런지 인식률이 떨어지는 것을 확인하였습니다.
 
+{% include image.html subdir=page.subdir name='demo.gif' caption='갤럭시 S7 + TensorFlowLite + MobileNet으로 마우스 + 머그컵 + 맥주병 인식' %}
+
 ## TensorFlow Lite 개요
 TensorFlow Lite는 기존의 TensorFlow을 통해서 학습된 모델을 기반으로 합니다. 
-TensorFlow 모델을 "TensorFlow Lite Converter" 통해서 TensorFlow Lite 모델(tflite)로 변환하고
+TensorFlow 모델을 "TensorFlow Lite Converter" 통해서 TensorFlow Lite 모델(tflite)로 변환하
 Andoird /iOS 환경에서 Inference를 용이하게 만듭니다. 
-따라서 TensorFlow Lite의 목적은 모델의 훈련에 있는 것이 아니고 저복잡도+작은바이너리로 모델로 변환하여 모바일 환경에서 구동하는 것에 있습니다.
-{% include image.html subdir=page.subdir name='tensorflowlite.jpg' caption='그림1: 구글문서 중 Tensorflow Lite 아키텍쳐 그림' %}
+따라서 TensorFlow Lite의 목적은 모델의 훈련에 있는 것이 아니고 모바일 환경에서 저복잡도+작은바이너리로 모델를 구동하는 것에 있습니다.
+
+{% include image.html subdir=page.subdir name='tensorflowlite.jpg' caption='그림1: 구글문서 중 Tensorflow Lite 아키텍쳐 그림 (이미지출처:https://www.tensorflow.org/mobile/tflite/)' %}
 
 ## 준비하기 
 - 먼저 Android Studio 3.0 가 필요합니다. 인스톨 해주세요. ([[여기서 가능]](https://developer.android.com/studio/index.html))
@@ -75,10 +78,11 @@ $ wget https://storage.googleapis.com/download.tensorflow.org/models/tflite/mobi
 
 ## 개인적인 감상
 - 모델 바이너리사이즈은 이전 TensoFlow모델 ([MobileNet_v1_1.0_224](http://download.tensorflow.org/models/mobilenet_v1_1.0_224_2017_06_14.tar.gz))에 비해서 상당이 줄어든 모양! 거의 1/50 수준입니다. 
-- 하지만 모델사이즈가 줄어든만큼 ([mobilenet_v1_0.25_128](http://download.tensorflow.org/models/mobilenet_v1_0.25_128_2017_06_14.tar.gz)에 비해서도!) 예측 정확도가 낮을 텐데, 같은 데이터 셋을 이용해서 측정을 안해봐서 잘 모르겠네요.
-- apk 바이너리가 디버그 빌드이긴 하지만 7.8MB 정도 입니다. 여기서 MobileNet 모델사이즈만 4.3MB입니다. 국민앱 카카오톡이 37MB정도 인데 테스트앱이 7.8MB이면 좀 큰편이군요. 
-- 딥러닝이 모바일에 가볍게 적용되기 위해서는 아직 모델의 바이너리사이즈 부분에서 상당한 개선이 필요한듯 합니다.
-- 사운들리 코어에 현재 버전의 TensorFlow Lite를 적용할 수 있을지는 다소 흐림이네요 ㅠㅠ. 커스터마이즈가 필요듯!
+- 하지만 모델사이즈가 줄어든만큼 ([mobilenet_v1_0.25_128](http://download.tensorflow.org/models/mobilenet_v1_0.25_128_2017_06_14.tar.gz)에 비해서도!) 예측 정확도에서 손실이 있을텐데요. 같은 데이터 셋을 이용해서 측정을 안해봐서 잘 모르겠네요.
+- 테스트한 apk 바이너리가 디버그 빌드이긴 하지만 7.8MB 정도 입니다. 여기서 mobilenet_quant_v1_224.tflite 모델사이즈만 4.3MB입니다. 국민앱 카카오톡이 37MB정도 인데 테스트앱이 7.8MB이면 좀 큰편이군요. 
+- 딥러닝이 모바일에 가볍게 적용되기 위해서는 아직 모델의 바이너리사이즈 부분에서 상당한 개선이 필요한듯 합니다. 당연히 정확도가 동반되야 하겠죠.
+- 사운들리 코어에 현재 버전의 TensorFlow Lite를 적용할 수 있을지는 다소 흐림이네요 ㅠㅠ. 상당한 커스터마이즈가 필요한듯!
+- 다음에는 저의 모델을 가지고 포스트 하길 바라며 마침니다. :-)
 
 ## 참고자료 및 출처
 - [Introduction to TensorFlow Lite 구글 문서](https://www.tensorflow.org/mobile/tflite/)
