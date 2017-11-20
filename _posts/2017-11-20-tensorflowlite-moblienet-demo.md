@@ -40,7 +40,7 @@ Andoird /iOS 환경에서 Inference를 용이하게 만듭니다.
 
 ## 빌드 환경 준비하기 
 - 먼저 Android Studio 3.0 가 필요합니다. 인스톨 해주세요. ([여기서 가능](https://developer.android.com/studio/index.html))
-- 이전에 TensorFlow repository를 클론 안하신 분들은 적당한 장소에 클론합니다. 참고로 데는 클론한 repo의 "tensorflow/contrib/lite/java/demo"에 위치해 있습니다.
+- 이전에 TensorFlow repository를 클론 안하신 분들은 적당한 장소에 클론합니다. 참고로 데모는 클론한 repo의 "tensorflow/contrib/lite/java/demo"에 위치해 있습니다.
 ```bash
 $ git clone https://github.com/tensorflow/tensorflow
 ```
