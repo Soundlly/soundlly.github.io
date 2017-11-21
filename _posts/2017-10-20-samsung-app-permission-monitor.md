@@ -4,7 +4,7 @@ title: 삼성 '앱 권한 모니터' 파헤치기
 description: 정식 출시된 삼성 갤럭시 노트8부터 탑재되는 삼성 안드로이드 7.1.1 OS의 신규 기능인 '앱 권한 모니터'의 기능과 대응 방안을 살펴 봅니다.
 author: pjhjohn
 subdir: samsung-app-permission-monitor
-thumbnail: thumbnail.jpeg
+thumbnail: thumbnail.png
 comments: true
 ---
 

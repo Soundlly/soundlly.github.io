@@ -4,7 +4,7 @@ title: TensorFlow Lite 101 - MoblieNet 맛보기
 description: TensorFlow Lite 프리뷰 버전에서 공개된 데모의 버그를 잡고 빌드해서 테스트 해봅니다.
 author: jwkang
 subdir: tensorflowlite-mobilenet-demo
-thumbnail: tensorflowlogo.png
+thumbnail: thumbnail.png
 comments: true
 ---
 
@@ -115,3 +115,4 @@ $ wget https://storage.googleapis.com/download.tensorflow.org/models/tflite/mobi
 - [TensorFlow Lite Preview GitHub (TensorFlow Lite)](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/lite)
 - [Google Developer Blog](https://developers.googleblog.com/2017/11/announcing-tensorflow-lite.html)
 - [MobileNet GitHub (MobileNet_v1)](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+- [TensorFlow Lite Image from CloudMile](https://www.mile.cloud/single-post/tensorflow-lite/)
