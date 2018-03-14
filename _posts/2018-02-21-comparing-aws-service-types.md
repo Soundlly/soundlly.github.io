@@ -53,28 +53,28 @@ instance 의 **분 단위** 사용량으로 계산하며, instance 의 성능에
 
 #### 개요
 
-AWS 에서 제공하는 기본적인 Docker 서비스로서, 짝꿍으로 제공되는 ECR 을 사용해서 Docker 이미지를 업로드 해둔 뒤, EC2 로 구성된 클러스터에 container 들을 운용하는 Docker Ochestration 서비스 입니다.
+AWS 에서 제공하는 기본적인 Docker 서비스로서, 짝꿍으로 제공되는 ECR 을 사용해서 Docker 이미지를 업로드 해둔 뒤, EC2 로 구성된 클러스터에 container 들을 운용하는 Docker Ochestration 서비스입니다.
 
 #### 개발자 할 일
 
-일단 **EC2 cluster 셋업**이 필요합니다. EC2 cluster 의 베이스가 되는 AMI 를 고르고, 필요시 ECS agent 도 설치해 둡니다.  
-ECS agent 는 EC2 cluster 의 각 instance 위에서 돌면서 개발자의 구령에 따라 docker 를 제어하는 역할을 수행합니다.
-이후 개발자가 application 을 docker image 로 만들어 repository 에 업로드 하게 되면, ECS 설정에 따라 EC2 cluster 어딘가에서 container 가 운영되게 됩니다.
+일단 **EC2 cluster 셋업**이 필요합니다. EC2 cluster의 베이스가 되는 AMI 를 고르고, 필요시 ECS agent 도 설치해 둡니다.  
+ECS agent는 EC2 cluster의 각 instance 위에서 돌면서 개발자의 구령에 따라 docker를 제어하는 역할을 수행합니다.
+이후 개발자가 application을 docker image로 만들어 repository에 업로드 하게 되면, ECS 설정에 따라 EC2 cluster 어딘가에서 container가 운영되게 됩니다.
 
-#### 과금방식
+#### 과금 방식
 
-구성된 EC2 cluster 에 대해서 **EC2 과금방식 - 분 단위**으로 과금 하게 됩니다.
+구성된 EC2 cluster 에 대해서 **EC2 과금 방식 - 분 단위**로 과금하게 됩니다.
 
 #### 운영 포인트
 
-- EC2 cluster 를 구성하기 위해 베이스가 되는 EC2 이미지를 잘 셋업해야 합니다. Docker 의 베이스 운영체제 셋업에 대해서는 다양한 글들을 참고하게 되겠네요. 이 베이스 EC2 cluster 를 셋업하는것과 ECS 개념을 이해하는데에 약간의 시간이 소요 됩니다.  
-- 한번 EC2 cluster 를 구성하고 ECS 설정을 마치면, 그 위에서 돌아가는 container 관리는 쉽습니다. (ECS cluster 구성을 하면서 ECS 를 공부하다보면 운영에 대한것 까지 다 알게 됩니다ㅎㅎ )
+- EC2 cluster를 구성하기 위해 베이스가 되는 EC2 이미지를 잘 셋업해야 합니다. Docker의 베이스 운영체제 셋업에 대해서는 다양한 글들을 참고하게 되겠네요. 이 베이스 EC2 cluster를 셋업 하는 것과 ECS 개념을 이해하는 데에 약간의 시간이 소요 됩니다.  
+- 한번 EC2 cluster를 구성하고 ECS 설정을 마치면, 그 위에서 돌아가는 container 관리는 쉽습니다. (ECS cluster 구성을 하면서 ECS 를 공부하다 보면 운영에 대한 것 까지 다 알게 됩니다ㅎㅎ )
 
 #### 주의 사항
 
-- ECS 에도 Auto Scaling 이 있어서 EC2 와 다르게 1초만에 Auto Scaling 이 될줄 알았는데, EC2 cluster 에 남는 자리가 없으면 결국 **EC2 한대 더 띄워야 되서** 똑같다는 점.. (오히려 EC2 cluster 에 scaling 설정을 추가 하기 복잡해짐)  
-- 요금 걱정때문에 EC2 cluster 에 빈자리 없이 꽉꽉 채워서 써야 한다면, 그냥 EC2 에 docker 셋업해서 쓰는게 더 간편함. (저희같은 소규모 클러스터에는 안맞나 봅니다)  
-(**Fargate** 라는 서비스가 등장하면서, 기존 EC2 Cluster 운영과 다른 포인트가 생겼습니다만, 아직 많은 Region 에서 지원하지 않고, 제가 아직 써보지 못해서 본문에서 제외 합니다. 개인적으로 좀 기대하고 있습니다 ㅎㅎ)
+- ECS에도 Auto Scaling이 있어서 EC2와 다르게 1초 만에 Auto Scaling이 될 줄 알았는데, EC2 cluster에 남는 자리가 없으면 결국 **EC2 한대 더 띄워야 해서** 똑같다는 점.. (오히려 EC2 cluster에 scaling 설정을 추가하기 복잡해짐)  
+- 요금 걱정 때문에 EC2 cluster에 빈자리 없이 꽉꽉 채워서 써야 한다면, 그냥 EC2 에 docker 셋업해서 쓰는 게 더 간편함. (저희 같은 소규모 클러스터에는 안맞나 봅니다)  
+(**Fargate** 라는 서비스가 등장하면서, 기존 EC2 Cluster 운영과 다른 포인트가 생겼습니다만, 아직 많은 Region에서 지원하지 않고, 제가 아직 써보지 못해서 본문에서 제외합니다. 개인적으로 좀 기대하고 있습니다 ㅎㅎ)
 
 
 
@@ -82,7 +82,7 @@ ECS agent 는 EC2 cluster 의 각 instance 위에서 돌면서 개발자의 구�
 
 #### 개요
 
-요새(?) 뜨고있는 **serverless** 방식의 컴퓨팅 서비스 입니다. 개발자는 운영체제 셋팅 등의 기반 기능에 대해서는 신경을 끄고, 처리해야되는 로직만 구현해서 돌릴 수 있는 서비스 입니다.
+요새(?) 뜨고 있는 **serverless** 방식의 컴퓨팅 서비스입니다. 개발자는 운영체제 셋팅 등의 기반 기능에 대해서는 신경을 끄고, 처리해야 되는 로직만 구현해서 돌릴 수 있는 서비스 입니다.
 
 #### 개발자 할 일
 
@@ -90,26 +90,26 @@ ECS agent 는 EC2 cluster 의 각 instance 위에서 돌면서 개발자의 구�
 
 #### 과금 방식
 
-Lambda 가 호출된 횟수와 호출되었을때 **사용한 메모리 + 컴퓨팅 시간**에 따른 과금 정책을 더해서 과금하게 됩니다.  
-보통 웹서비스를 만들때 API Gateway 와 함께 사용하게 되는데, API Gateway 는 **호출된 횟수**에 따라 과금합니다.
+Lambda가 호출된 횟수와 호출되었을 때 **사용한 메모리 + 컴퓨팅 시간**에 따른 과금 정책을 더해서 과금하게 됩니다.  
+보통 웹서비스를 만들 때 API Gateway와 함께 사용하게 되는데, API Gateway는 **호출된 횟수**에 따라 과금합니다.
 
 #### 운영 포인트
 
-- 인프라 관리 걱정이 없기 때문에, 편하게 만들어서 편하게 호출해 봅니다. Load Balancing 도 딱히 신경 안써도 됩니다.   
-- Lambda 자체는 **기한없이 월 100만건 Free Tier** 가 있으므로, 쓸수 있다면 팍팍 써보는게 좋습니다.  
-- 또한 서비스 극초기에 web service 를 API Gateway + Lambda 로 구성해서 Free Tier 혜택을 받는다면, **EC2 Free Tier 한대가 남기 때문에** 다른 용도로 쓰기 좋습니다.  
-- 한마디로, 쓸수 있는 환경이라면 무조건 써보는게 좋습니다.
+- 인프라 관리 걱정이 없기 때문에, 편하게 만들어서 편하게 호출해 봅니다. Load Balancing도 딱히 신경 안 써도 됩니다.   
+- Lambda 자체는 **기한 없이 월 100만 건 Free Tier**가 있으므로, 쓸 수 있다면 팍팍 써보는 게 좋습니다.  
+- 또한, 서비스 극초기에 web service를 API Gateway + Lambda로 구성해서 Free Tier 혜택을 받는다면, **EC2 Free Tier 한대가 남기 때문에** 다른 용도로 쓰기 좋습니다.  
+- 한마디로, 쓸 수 있는 환경이라면 무조건 써보는 게 좋습니다.
 
 #### 주의 사항
 
-- API Gateway + Lambda 를 기본적인 serveless web application 으로 구성하는데, 호출 수가 많아질수록 비례하는 요금때문에, heart beat 성 트래픽이나, 요청이 잦은 서비스에는 쓰면 안됨 (정확히는 요금이 너무 많이 청구됨)  
-- API Gateway + Lambda 의 초기 설정이 별로 친숙하게 다가오지 않음. (그래서 Serverless 등의 Framework 를 써서 극복해 봅니다.)
+- 보통 API Gateway + Lambda를 기본적인 serveless web application으로 구성하는데, 호출 수가 많아질수록 비례하는 요금 때문에, heart beat 성 트래픽이나, 요청이 잦은 서비스에는 쓰면 안 됨 (정확히는 요금이 너무 많이 청구됨)  
+- API Gateway + Lambda의 초기 설정이 별로 친숙하게 다가오지 않음. (그래서 Serverless 등의 Framework를 써서 극복해 봅니다)
 
 
-EC2 는 AWS 관련 지식의 깊이에 상관없이 사용할 수 있어서 쉽게 접근 가능하지만,   
-결국 클라우드 를 잘 사용하는건 클라우드에서 제공하는 다양한 서비스를 잘 이해하고, 문제에 맞는 솔루션을 적용하는 것이라고 생각 됩니다. *(물론 비용도 맞춰서....)*  
-이 외에도 AWS 에서 제공하는 컴퓨팅 서비스에는 Beanstalk, Lightsail 등이 있는데요,  
-각 상황에 맞는 솔루션 적용으로 즐겁고 저렴한 개발 되시길 바라겠습니다. ㅎㅎㅎ
+EC2 는 AWS 관련 지식의 깊이에 상관없이 사용할 수 있어서 쉽게 접근할 수 있지만,   
+결국 클라우드를 잘 사용하는 건 클라우드에서 제공하는 다양한 서비스를 잘 이해하고, 문제에 맞는 솔루션을 적용하는 것이라고 생각됩니다. *(물론 비용도 맞춰서....)*  
+이 외에도 AWS에서 제공하는 컴퓨팅 서비스에는 Beanstalk, Lightsail 등이 있는데요,  
+각 상황에 맞는 솔루션 적용으로 즐겁고 저렴한 개발 되시길 바랍니다. ㅎㅎㅎ
 
 
 
