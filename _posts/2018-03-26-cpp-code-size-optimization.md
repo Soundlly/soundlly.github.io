@@ -93,9 +93,9 @@ product레벨의 C++코딩을 처음으로 하게된 신입 개발자들에게�
 
 기계들이 스스로 노래하고 흥얼거리는 세상을 위해!
 
-## 참고 링크 
-- [C언어의 메모리 구조] [http://dsnight.tistory.com/50](http://dsnight.tistory.com/50)
-- [Beom's Blog] [http://myblog.opendocs.co.kr/archives/1301](http://myblog.opendocs.co.kr/archives/1301)
-- [Block Busting Blog] [http://sfixer.tistory.com/entry/%EB%A9%94%EB%AA%A8%EB%A6%AC-%EC%98%81%EC%97%ADcode-data-stack-heap](http://sfixer.tistory.com/entry/%EB%A9%94%EB%AA%A8%EB%A6%AC-%EC%98%81%EC%97%ADcode-data-stack-heap)
-- [템플릿 코드부풀림 현상] [http://yesarang.tistory.com/268](http://yesarang.tistory.com/268)
-- [C++ 예외처리] [http://yesarang.tistory.com/372](http://yesarang.tistory.com/372) 
+## 참고자료 및 출처
+- [기초 탄탄 영상털이's Stroy - C언어의 메모리 구조](http://dsnight.tistory.com/50)
+- [Beom's Blog - 정적 & 동적 메모리 할당](http://myblog.opendocs.co.kr/archives/1301)
+- [Block Busting Blog - 메모리 영역(code, data, stack, heap)](http://sfixer.tistory.com/entry/%EB%A9%94%EB%AA%A8%EB%A6%AC-%EC%98%81%EC%97%ADcode-data-stack-heap)
+- [김윤수의 이상계를 꿈꾸며 - 템플릿 코드부풀림 현상](http://yesarang.tistory.com/268)
+- [김윤수의 이상계를 꿈꾸며 - C++ 예외처리](http://yesarang.tistory.com/372)
