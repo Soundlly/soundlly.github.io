@@ -23,6 +23,12 @@ workspace$ brew install ruby
 workspace$ sudo gem install jekyll
 workspace$ sudo gem install jekyll-paginate
 ```
+Note that gem may require ruby version update.
+```bash
+workspace$ \curl -sSL https://get.rvm.io | bash -s stable
+workspace$ rvm install ruby-2.x.x
+workspace$ rvm use ruby-2.x.x --default
+```
 
 #### 4. Clone Repository
 
