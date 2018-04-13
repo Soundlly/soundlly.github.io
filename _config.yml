@@ -91,10 +91,13 @@ authors:
   humbledude:
     nickname: humbledude
     fullname: 박근희
-    description: ''
+    description: >
+      사운들리에서 서버 개발을 담당하고 있습니다.<br>
+      배울수 있으면 뭐라도 해봅니다.
     gravatar: ba40387f2f18e1e0c2164d111cbe0607
     email: keunhui.park@soundl.ly
     github: humbledude
+    facebook: https://www.facebook.com/keunhui.park
   wonje:
     nickname: wonje
     fullname: 송원제
